@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KalkulatorWO")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+93cf1016ec3623c2122f8359cc395d8a2598c041")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+52bb78900ea8eec7ddb597491f24098e3222ed7d")]
 [assembly: System.Reflection.AssemblyProductAttribute("KalkulatorWO")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KalkulatorWO")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -10,8 +10,7 @@ namespace KalkulatorWO
     public class CurrentValue
     {
         
-
-
+        
         public enum DigitSystem
         {
             Hex,
@@ -29,6 +28,9 @@ namespace KalkulatorWO
 
         //
         public string textBox1Expression {  get; set; }
+        public string currentDzialanie {  get; set; }
+        public string lastOperacja {  get; set; }
+
         public string element1 { get; set; }
         public string element2 { get; set; }
         public string currentOperation { get; set; }
@@ -37,6 +39,8 @@ namespace KalkulatorWO
         //Form1 form1 { get; set; }
         public CurrentValue()
         {
+            this.lastOperacja = "";
+            this.currentDzialanie = "";
             this.textBox1Expression = "";
             this.element1 = "";
             this.element2 = "";
@@ -44,7 +48,7 @@ namespace KalkulatorWO
             this.digitSystem = DigitSystem.Dec;
             this.words = Words.QWord;
         }
-        //
+        //d
 
 
         long tempResult { get; set; }

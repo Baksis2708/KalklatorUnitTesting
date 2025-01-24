@@ -251,6 +251,7 @@ namespace KalkulatorWO
             btnMinus.TabIndex = 13;
             btnMinus.Text = "-";
             btnMinus.UseVisualStyleBackColor = true;
+            btnMinus.Click += btnMinus_Click;
             // 
             // btnMulti
             // 
@@ -260,6 +261,7 @@ namespace KalkulatorWO
             btnMulti.TabIndex = 14;
             btnMulti.Text = "*";
             btnMulti.UseVisualStyleBackColor = true;
+            btnMulti.Click += btnMulti_Click;
             // 
             // btnDiv
             // 
@@ -269,6 +271,7 @@ namespace KalkulatorWO
             btnDiv.TabIndex = 15;
             btnDiv.Text = "/";
             btnDiv.UseVisualStyleBackColor = true;
+            btnDiv.Click += btnDiv_Click;
             // 
             // button1
             // 
@@ -276,8 +279,9 @@ namespace KalkulatorWO
             button1.Name = "button1";
             button1.Size = new System.Drawing.Size(35, 62);
             button1.TabIndex = 16;
-            button1.Text = "/";
+            button1.Text = "=";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // btnCReset
             // 
@@ -333,6 +337,7 @@ namespace KalkulatorWO
             btnModMath.TabIndex = 22;
             btnModMath.Text = "%";
             btnModMath.UseVisualStyleBackColor = true;
+            btnModMath.Click += btnModMath_Click;
             // 
             // btnSqrt
             // 

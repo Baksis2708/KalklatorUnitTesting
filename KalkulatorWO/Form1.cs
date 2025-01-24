@@ -22,6 +22,8 @@ namespace KalkulatorWO
             rBtnDec.Checked = true;
             rBtnQword.Checked = true;
             btnRev.Enabled = false;
+            btnSqrt.Enabled = false;
+            btnModMath.Enabled = false;
         }
 
 
@@ -30,6 +32,10 @@ namespace KalkulatorWO
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+            if(textBox1.Text.Length <= 1)
+            {
+                textBox1.Text = " " + textBox1.Text;
+            }
             currentValue.textBox1Expression = textBox1.Text;
         }
 
@@ -106,7 +112,7 @@ namespace KalkulatorWO
 
         private void btnPlus_Click(object sender, EventArgs e)
         {
-
+            dzialanieArytmetyczne("+");
         }
         private void btn0_Click(object sender, EventArgs e)
         {
@@ -358,10 +364,21 @@ namespace KalkulatorWO
         }
 
         //Cyfra to string, bo moze tez byc A, B, C, D, E, F
+        /*
         private void klikniecieCyfry(string cyfra, Button przycisk)
         {
+            bool flag = false;
+            if (currentValue.lastOperacja != "")
+            {
+                textBox1.Text = cyfra;
+                flag = true;
+                currentValue.currentDzialanie = currentValue.currentDzialanie + cyfra;
+
+                return;
+            }
             if (textBox1.Text.Substring(textBox1.Text.Length - 2) == " 0")
             {
+                
                 textBox1.Text = textBox1.Text.Substring(0, textBox1.Text.Length - 1) + cyfra;
 
             }
@@ -369,7 +386,33 @@ namespace KalkulatorWO
             {
 
                 textBox1.Text = textBox1.Text + cyfra;
+                if(flag == false)
+                {
+                    currentValue.currentDzialanie = currentValue.currentDzialanie + cyfra;
+                }
+                    
             }
+
+            currentValue.lastOperacja = "";
+
+        }
+        */
+        private void klikniecieCyfry(string cyfra, Button przycisk)
+        {
+            // Jeśli ostatnia operacja była operatorem, zacznij nową liczbę
+            if (!string.IsNullOrEmpty(currentValue.lastOperacja))
+            {
+                textBox1.Text = "";
+                currentValue.lastOperacja = "";
+            }
+
+            // Zapobiegaj wielokrotnym zerom na początku
+            if (textBox1.Text == "0" && cyfra == "0")
+                return;
+
+            // Aktualizuj interfejs i wyrażenie
+            textBox1.Text += cyfra;
+            currentValue.currentDzialanie += cyfra;
         }
 
         private void lbl15_Click(object sender, EventArgs e)
@@ -380,6 +423,77 @@ namespace KalkulatorWO
         private void label22_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnMinus_Click(object sender, EventArgs e)
+        {
+            dzialanieArytmetyczne("-");
+        }
+
+        private void btnMulti_Click(object sender, EventArgs e)
+        {
+            dzialanieArytmetyczne("*");
+        }
+
+        private void btnDiv_Click(object sender, EventArgs e)
+        {
+            dzialanieArytmetyczne("/");
+        }
+
+        //dzialanie : +, -, *, /, MOD, RSH, LSH, AND, OR, XOR
+        /*
+        private void dzialanieArytmetyczne(string dzialanie)
+        {
+            string dzialaniaString = "/+-*MODRSHLSHANDORXOR";
+            if (currentValue.lastOperacja != "")
+            {
+                currentValue.currentDzialanie = currentValue.currentDzialanie + currentValue.currentDzialanie.Substring(0, currentValue.currentDzialanie.Length - dzialanie.Length - 2);
+                
+            }
+            currentValue.lastOperacja = dzialanie;
+            currentValue.currentDzialanie = currentValue.currentDzialanie + " " + dzialanie + " ";
+        }
+        */
+        private void dzialanieArytmetyczne(string dzialanie)
+        {
+            // Jeśli wyrażenie jest puste, nie dodawaj operatora
+            if (string.IsNullOrEmpty(currentValue.currentDzialanie))
+                return;
+
+            // Sprawdź ostatni znak w wyrażeniu
+            char ostatniZnak = currentValue.currentDzialanie[^1];
+
+            // Jeśli ostatni znak to operator, zastąp go
+            if ("+-*/%".Contains(ostatniZnak))
+            {
+                currentValue.currentDzialanie = currentValue.currentDzialanie[..^1] + dzialanie;
+            }
+            else
+            {
+                currentValue.currentDzialanie += $" {dzialanie} ";
+            }
+
+            currentValue.lastOperacja = dzialanie;
+            textBox1.Text = dzialanie; // Opcjonalnie: pokaż operator na ekranie
+        }
+
+        // =
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+            textBox1.Text = initEval();
+        }
+
+        private string initEval()
+        {
+            textBox1.Text = currentValue.currentDzialanie;
+            return CurrentValue.EvaluateAsLong(currentValue.currentDzialanie).ToString();
+        }
+
+        // %
+        private void btnModMath_Click(object sender, EventArgs e)
+        {
+            dzialanieArytmetyczne("%");
         }
     }
 }
