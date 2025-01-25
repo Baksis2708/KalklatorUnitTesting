@@ -3,10 +3,39 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.CodeAnalysis.CSharp.Scripting;
 using KalkulatorWO;
+using Microsoft.CodeAnalysis.Scripting;
+
 
 namespace KalkulatorWO
 {
+    /// <summary>
+    /// /////////////////////////////////////////////////////////////////////////////////////////////////
+    /// </summary>
+
+
+        public static class BitOperations
+        {
+            public static long Rol(long value)
+            {
+                int shift = 1;
+                int bits = sizeof(long) * 8;
+                return (value << shift) | (value >> (bits - shift));
+            }
+
+            public static long Ror(long value)
+            {
+                int shift = 1;
+                int bits = sizeof(long) * 8;
+                return (value >> shift) | (value << (bits - shift));
+            }
+        }
+
+
+
+    /////////////////////////////////////////////////////////////////////////////////////////////////////
+
     public class CurrentValue
     {
         
@@ -27,6 +56,7 @@ namespace KalkulatorWO
         }
 
         //
+        public string memoryLiczba {  get; set; }
         public string textBox1Expression {  get; set; }
         public string currentDzialanie {  get; set; }
         public string lastOperacja {  get; set; }
@@ -39,6 +69,7 @@ namespace KalkulatorWO
         //Form1 form1 { get; set; }
         public CurrentValue()
         {
+            this.memoryLiczba = "";
             this.lastOperacja = "";
             this.currentDzialanie = "";
             this.textBox1Expression = "";
@@ -141,6 +172,8 @@ namespace KalkulatorWO
             return double.Parse((string)row["expression"]);
         }
 
+
+        /*
         public static long EvaluateAsLong(string expression)
         {
             System.Data.DataTable table = new System.Data.DataTable();
@@ -150,6 +183,59 @@ namespace KalkulatorWO
             double temp = double.Parse((string)row["expression"]);
             return (long)temp;
         }
+        */
+
+        /*
+        public static long EvaluateAsLong(string expression)
+        {
+            // Usuń ewentualne białe znaki i oblicz wyrażenie
+            var task = CSharpScript.EvaluateAsync<long>(expression.Trim());
+            Task.WaitAll(task); // Oczekiwanie na wynik (uwaga: może blokować wątek UI)
+            return task.Result;
+        }
+        */
+
+        /*
+        public static long EvaluateAsLong(string expression)
+        {
+            var options = ScriptOptions.Default
+                .AddReferences(typeof(CurrentValue).Assembly) 
+                .AddImports("KalkulatorWO");
+
+            var task = CSharpScript.EvaluateAsync<long>(expression, options);
+            Task.WaitAll(task);
+            return task.Result;
+        }
+        */
+
+        public static long EvaluateAsLong(string expression)
+        {
+            var options = ScriptOptions.Default
+                .AddReferences(typeof(CurrentValue).Assembly) // CurrentValue musi być w tym samym assembly co BitOperations
+                .AddImports("KalkulatorWO"); // Przestrzeń nazw, w której jest BitOperations
+
+            var task = CSharpScript.EvaluateAsync<long>(expression, options);
+            Task.WaitAll(task);
+            return task.Result;
+        }
+
+
+        public static long Rol(long value)
+        {
+            int shift = 1;
+            int bits = sizeof(long) * 8;
+            shift %= bits;
+            return (value << shift) | (value >> (bits - shift));
+        }
+
+        public static long Ror(long value)
+        {
+            int shift = 1;
+            int bits = sizeof(long) * 8;
+            shift %= bits;
+            return (value >> shift) | (value << (bits - shift));
+        }
+
 
         public void ZmienSystemLiczbowy(DigitSystem systemDocelowy)
         {

@@ -232,6 +232,7 @@ namespace KalkulatorWO
             btnComma.TabIndex = 11;
             btnComma.Text = ",";
             btnComma.UseVisualStyleBackColor = true;
+            btnComma.Click += btnComma_Click;
             // 
             // btnPlus
             // 
@@ -291,6 +292,7 @@ namespace KalkulatorWO
             btnCReset.TabIndex = 17;
             btnCReset.Text = "C";
             btnCReset.UseVisualStyleBackColor = true;
+            btnCReset.Click += btnCReset_Click;
             // 
             // btnCE
             // 
@@ -300,6 +302,7 @@ namespace KalkulatorWO
             btnCE.TabIndex = 18;
             btnCE.Text = "CE";
             btnCE.UseVisualStyleBackColor = true;
+            btnCE.Click += btnCE_Click;
             // 
             // btnBack
             // 
@@ -309,6 +312,7 @@ namespace KalkulatorWO
             btnBack.TabIndex = 19;
             btnBack.Text = "←";
             btnBack.UseVisualStyleBackColor = true;
+            btnBack.Click += btnBack_Click;
             // 
             // btnPlusMinus
             // 
@@ -318,6 +322,7 @@ namespace KalkulatorWO
             btnPlusMinus.TabIndex = 20;
             btnPlusMinus.Text = "±";
             btnPlusMinus.UseVisualStyleBackColor = true;
+            btnPlusMinus.Click += btnPlusMinus_Click;
             // 
             // btnRev
             // 
@@ -356,6 +361,7 @@ namespace KalkulatorWO
             btnMC.TabIndex = 24;
             btnMC.Text = "MC";
             btnMC.UseVisualStyleBackColor = true;
+            btnMC.Click += btnMC_Click;
             // 
             // btnMR
             // 
@@ -365,6 +371,7 @@ namespace KalkulatorWO
             btnMR.TabIndex = 25;
             btnMR.Text = "MR";
             btnMR.UseVisualStyleBackColor = true;
+            btnMR.Click += btnMR_Click;
             // 
             // btnMS
             // 
@@ -374,6 +381,7 @@ namespace KalkulatorWO
             btnMS.TabIndex = 26;
             btnMS.Text = "MS";
             btnMS.UseVisualStyleBackColor = true;
+            btnMS.Click += btnMS_Click;
             // 
             // btnMPlus
             // 
@@ -383,6 +391,7 @@ namespace KalkulatorWO
             btnMPlus.TabIndex = 27;
             btnMPlus.Text = "M+";
             btnMPlus.UseVisualStyleBackColor = true;
+            btnMPlus.Click += btnMPlus_Click;
             // 
             // btnMMinus
             // 
@@ -392,6 +401,7 @@ namespace KalkulatorWO
             btnMMinus.TabIndex = 28;
             btnMMinus.Text = "M-";
             btnMMinus.UseVisualStyleBackColor = true;
+            btnMMinus.Click += btnMMinus_Click;
             // 
             // btnA
             // 
@@ -453,6 +463,7 @@ namespace KalkulatorWO
             btnModProg.TabIndex = 35;
             btnModProg.Text = "Mod";
             btnModProg.UseVisualStyleBackColor = true;
+            btnModProg.Click += btnModProg_Click;
             // 
             // btnCloseP
             // 
@@ -462,6 +473,7 @@ namespace KalkulatorWO
             btnCloseP.TabIndex = 36;
             btnCloseP.Text = ")";
             btnCloseP.UseVisualStyleBackColor = true;
+            btnCloseP.Click += btnCloseP_Click;
             // 
             // btnRoR
             // 
@@ -472,6 +484,7 @@ namespace KalkulatorWO
             btnRoR.TabIndex = 37;
             btnRoR.Text = "RoR";
             btnRoR.UseVisualStyleBackColor = true;
+            btnRoR.Click += btnRoR_Click;
             // 
             // btnXor
             // 
@@ -482,6 +495,7 @@ namespace KalkulatorWO
             btnXor.TabIndex = 38;
             btnXor.Text = "Xor";
             btnXor.UseVisualStyleBackColor = true;
+            btnXor.Click += btnXor_Click;
             // 
             // btnRsh
             // 
@@ -492,6 +506,7 @@ namespace KalkulatorWO
             btnRsh.TabIndex = 39;
             btnRsh.Text = "Rsh";
             btnRsh.UseVisualStyleBackColor = true;
+            btnRsh.Click += btnRsh_Click;
             // 
             // btnAnd
             // 
@@ -502,6 +517,7 @@ namespace KalkulatorWO
             btnAnd.TabIndex = 40;
             btnAnd.Text = "And";
             btnAnd.UseVisualStyleBackColor = true;
+            btnAnd.Click += btnAnd_Click;
             // 
             // btnBlank
             // 
@@ -519,6 +535,7 @@ namespace KalkulatorWO
             btnOpenP.TabIndex = 42;
             btnOpenP.Text = "(";
             btnOpenP.UseVisualStyleBackColor = true;
+            btnOpenP.Click += btnOpenP_Click;
             // 
             // btnRol
             // 
@@ -529,6 +546,7 @@ namespace KalkulatorWO
             btnRol.TabIndex = 43;
             btnRol.Text = "RoL";
             btnRol.UseVisualStyleBackColor = true;
+            btnRol.Click += btnRol_Click;
             // 
             // btnOr
             // 
@@ -539,6 +557,7 @@ namespace KalkulatorWO
             btnOr.TabIndex = 44;
             btnOr.Text = "Or";
             btnOr.UseVisualStyleBackColor = true;
+            btnOr.Click += btnOr_Click;
             // 
             // btnLsh
             // 
@@ -549,6 +568,7 @@ namespace KalkulatorWO
             btnLsh.TabIndex = 45;
             btnLsh.Text = "Lsh";
             btnLsh.UseVisualStyleBackColor = true;
+            btnLsh.Click += btnLsh_Click;
             // 
             // btnNot
             // 
@@ -559,6 +579,7 @@ namespace KalkulatorWO
             btnNot.TabIndex = 46;
             btnNot.Text = "Not";
             btnNot.UseVisualStyleBackColor = true;
+            btnNot.Click += btnNot_Click;
             // 
             // btnC
             // 
@@ -860,6 +881,7 @@ namespace KalkulatorWO
             lbl0.Size = new System.Drawing.Size(31, 15);
             lbl0.TabIndex = 9;
             lbl0.Text = "0000";
+            lbl0.Click += lbl0_Click;
             // 
             // lbl14
             // 
@@ -869,6 +891,7 @@ namespace KalkulatorWO
             lbl14.Size = new System.Drawing.Size(31, 15);
             lbl14.TabIndex = 8;
             lbl14.Text = "0000";
+            lbl14.Click += lbl14_Click;
             // 
             // lbl13
             // 

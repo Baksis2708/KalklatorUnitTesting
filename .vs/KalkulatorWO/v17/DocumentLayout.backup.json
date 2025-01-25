@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "E:\\GitHubRepos\\KalklatorUnitTesting\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FADC3E9C-7209-4A27-B879-BD8294B12758}|KalkulatorWO\\KalkulatorWO.csproj|e:\\githubrepos\\kalklatorunittesting\\kalkulatorwo\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FADC3E9C-7209-4A27-B879-BD8294B12758}|KalkulatorWO\\KalkulatorWO.csproj|solutionrelative:kalkulatorwo\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FADC3E9C-7209-4A27-B879-BD8294B12758}|KalkulatorWO\\KalkulatorWO.csproj|e:\\githubrepos\\kalklatorunittesting\\kalkulatorwo\\currentvalue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FADC3E9C-7209-4A27-B879-BD8294B12758}|KalkulatorWO\\KalkulatorWO.csproj|solutionrelative:kalkulatorwo\\currentvalue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FADC3E9C-7209-4A27-B879-BD8294B12758}|KalkulatorWO\\KalkulatorWO.csproj|e:\\githubrepos\\kalklatorunittesting\\kalkulatorwo\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FADC3E9C-7209-4A27-B879-BD8294B12758}|KalkulatorWO\\KalkulatorWO.csproj|solutionrelative:kalkulatorwo\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FADC3E9C-7209-4A27-B879-BD8294B12758}|KalkulatorWO\\KalkulatorWO.csproj|E:\\GitHubRepos\\KalklatorUnitTesting\\kalkulatorwo\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
@@ -42,26 +42,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Form1.cs",
               "DocumentMoniker": "E:\\GitHubRepos\\KalklatorUnitTesting\\KalkulatorWO\\Form1.cs",
               "RelativeDocumentMoniker": "KalkulatorWO\\Form1.cs",
               "ToolTip": "E:\\GitHubRepos\\KalklatorUnitTesting\\KalkulatorWO\\Form1.cs",
               "RelativeToolTip": "KalkulatorWO\\Form1.cs",
-              "ViewState": "AgIAANABAAAAAAAAAAArwOEBAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAAEAAAAAAAAAAAcwB0EAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-24T16:23:46.831Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "CurrentValue.cs",
               "DocumentMoniker": "E:\\GitHubRepos\\KalklatorUnitTesting\\KalkulatorWO\\CurrentValue.cs",
               "RelativeDocumentMoniker": "KalkulatorWO\\CurrentValue.cs",
               "ToolTip": "E:\\GitHubRepos\\KalklatorUnitTesting\\KalkulatorWO\\CurrentValue.cs",
               "RelativeToolTip": "KalkulatorWO\\CurrentValue.cs",
-              "ViewState": "AgIAAJwAAAAAAAAAAAAswL4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAPIAAAAAAAAAAAAIwBQBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-24T15:22:14.881Z",
               "EditorCaption": ""
@@ -74,7 +74,7 @@
               "RelativeDocumentMoniker": "KalkulatorWO\\Form1.Designer.cs",
               "ToolTip": "E:\\GitHubRepos\\KalklatorUnitTesting\\KalkulatorWO\\Form1.Designer.cs",
               "RelativeToolTip": "KalkulatorWO\\Form1.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAO0DAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-24T16:13:09.194Z",
               "EditorCaption": ""
