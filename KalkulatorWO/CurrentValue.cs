@@ -82,13 +82,13 @@ namespace KalkulatorWO
         //d
 
 
-        long tempResult { get; set; }
-        long value { get; set; }
-        string stringValue { get; set; }
-        string hex;
-        string dec;
-        string oct;
-        string bin;
+        public long tempResult { get; set; }
+        public long value { get; set; }
+        public string stringValue { get; set; }
+        public string hex;
+        public string dec;
+        public string oct;
+        public string bin;
         //DigitSystem digitSystem = DigitSystem.Dec;
         //Words words = Words.QWord;
         
@@ -140,22 +140,22 @@ namespace KalkulatorWO
 
 
         }
-        void UpdateToQword<T>(T value)
+        public void UpdateToQword<T>(T value)
         {
             this.value = Convert.ToInt64(value);
             words = Words.QWord;
         }
-        void UpdateToDword<T>(T value)
+        public void UpdateToDword<T>(T value)
         {
             this.value = Convert.ToInt32(value);
             words = Words.DWord;
         }
-        void UpdateToWord<T>(T value)
+        public void UpdateToWord<T>(T value)
         {
             this.value = Convert.ToInt16(value);
             words = Words.Word;
         }
-        void UpdateToBajt<T>(T value)
+        public void UpdateToBajt<T>(T value)
         {
             this.value = Convert.ToSByte(value);
             words = Words.Bajt;

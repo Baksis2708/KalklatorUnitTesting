@@ -522,7 +522,7 @@ namespace KalkulatorWO
 
         }
 
-        private string initEval()
+        public string initEval()
         {
             if (currentValue.textBox1Expression == " 0" || currentValue.textBox1Expression == "")
             {
@@ -614,7 +614,7 @@ namespace KalkulatorWO
         }
 
         // Pomocnicza funkcja do zmiany znaku
-        private string InvertNumberSign(string number)
+        public string InvertNumberSign(string number)
         {
             return number.StartsWith("-") ? number.Substring(1) : "-" + number;
         }
