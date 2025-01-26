@@ -957,7 +957,7 @@ namespace KalkulatorWO
         }
 
         // Funkcja pomocnicza sprawdzająca, czy token jest liczbą
-        private bool IsNumericToken1(string token)
+        public bool IsNumericToken1(string token)
         {
             return long.TryParse(token, out _);
         }
@@ -999,7 +999,7 @@ namespace KalkulatorWO
         }
 
         // Sprawdza, czy token jest liczbą (całkowitą)
-        private bool IsNumericToken(string token)
+        public bool IsNumericToken(string token)
         {
             return long.TryParse(token, out _);
         }
