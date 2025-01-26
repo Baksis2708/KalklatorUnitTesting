@@ -1,5 +1,6 @@
 using System;
 using Xunit;
+using KalkulatorWO;
 
 namespace UnitTests
 {
@@ -17,12 +18,15 @@ namespace UnitTests
         [Fact]
         public void AdditionTest2()
         {
-            Assert.Equal(5, Add(2, 2));
+            Assert.Equal(5, Add(3, 2));
         }
+
         [Fact]
-        public void Test1()
+        public void test1()
         {
+            Assert.Equal(10, CurrentValue.EvaluateAsLong("7 + 3"));
 
         }
+
     }
 }
